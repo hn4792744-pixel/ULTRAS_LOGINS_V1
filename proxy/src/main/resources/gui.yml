@@ -1,0 +1,126 @@
+# ============================================================
+# Ultras Login v1 - تصميم الواجهات (GUI)
+# النصوص (name-key / lore-key) تُقرأ من messages_xx.yml بحسب لغة اللاعب.
+# action:  lang:en | lang:ar | toggle:notifications | toggle:sounds | toggle:reminders | continue | close
+# show-when: language-pending (قبل اختيار اللغة) | language-chosen (بعد اختيارها)
+# material: أي Material صالح في Paper.   glow: توهج العنصر
+# ============================================================
+file-version: 1
+
+filler:
+  material: BLACK_STAINED_GLASS_PANE
+
+# ---- عنوان: UC | LANGUAGE -------------------------------------------------
+language:
+  rows: 3
+  items:
+    header:
+      slot: 4
+      material: NETHER_STAR
+      name-key: gui-select-language-name
+      lore-key: gui-select-language-lore
+    english:
+      slot: 11
+      material: WRITABLE_BOOK
+      name: "<main><raw>English</raw>"
+      lore-key: gui-click-select
+      action: "lang:en"
+    arabic:
+      slot: 15
+      material: BOOK
+      name: "<main>العربية"
+      lore-key: gui-click-select
+      action: "lang:ar"
+    footer:
+      slot: 22
+      material: PAPER
+      name-key: gui-footer-name
+      lore-key: gui-footer-lore
+
+# ---- واجهة أول دخول: لغة + إشعارات + أصوات -------------------------------------
+first-join:
+  rows: 4
+  items:
+    header:
+      slot: 4
+      material: NETHER_STAR
+      name-key: gui-select-language-name
+      lore-key: gui-select-language-lore
+    english:
+      slot: 11
+      material: WRITABLE_BOOK
+      name: "<main><raw>English</raw>"
+      lore-key: gui-click-select
+      action: "lang:en"
+    arabic:
+      slot: 15
+      material: BOOK
+      name: "<main>العربية"
+      lore-key: gui-click-select
+      action: "lang:ar"
+    notifications:
+      slot: 20
+      material: BELL
+      name-key: gui-notifications-name
+      lore-key: gui-notifications-lore
+      action: "toggle:notifications"
+    sounds:
+      slot: 24
+      material: NOTE_BLOCK
+      name-key: gui-sounds-name
+      lore-key: gui-sounds-lore
+      action: "toggle:sounds"
+    pending:
+      slot: 31
+      material: PAPER
+      name-key: gui-pending-name
+      lore-key: gui-pending-lore
+      show-when: language-pending
+    continue:
+      slot: 31
+      material: LIME_DYE
+      name-key: gui-continue-name
+      lore-key: gui-continue-lore
+      action: continue
+      show-when: language-chosen
+
+# ---- /register setting ----------------------------------------------------------
+settings:
+  rows: 3
+  items:
+    english:
+      slot: 10
+      material: WRITABLE_BOOK
+      name: "<main><raw>English</raw>"
+      lore-key: gui-click-select
+      action: "lang:en"
+    arabic:
+      slot: 11
+      material: BOOK
+      name: "<main>العربية"
+      lore-key: gui-click-select
+      action: "lang:ar"
+    notifications:
+      slot: 13
+      material: BELL
+      name-key: gui-notifications-name
+      lore-key: gui-notifications-lore
+      action: "toggle:notifications"
+    sounds:
+      slot: 14
+      material: NOTE_BLOCK
+      name-key: gui-sounds-name
+      lore-key: gui-sounds-lore
+      action: "toggle:sounds"
+    reminders:
+      slot: 15
+      material: CLOCK
+      name-key: gui-reminders-name
+      lore-key: gui-reminders-lore
+      action: "toggle:reminders"
+    close:
+      slot: 22
+      material: BARRIER
+      name-key: gui-close-name
+      lore-key: gui-close-lore
+      action: close

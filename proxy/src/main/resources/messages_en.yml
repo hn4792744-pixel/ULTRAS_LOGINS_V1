@@ -1,0 +1,261 @@
+# Ultras Login v1 - English messages (MiniMessage).
+# Tags: <prefix> <dot> <success> <error> <warning> <info> <main> <muted> <accent>
+# Placeholders look like %name%. English text is converted to small caps automatically
+# (meta.small-caps). Wrap text in <raw>...</raw> to keep it as normal letters.
+file-version: 1
+
+meta:
+  name: "English"
+  small-caps: true
+
+# ---------------------------------------------------------------- general
+service-unavailable:
+  - "<prefix> <error>Authentication is temporarily unavailable."
+  - "<dot> <muted>Please try again in a moment."
+bridge-missing:
+  - "<prefix> <error>This server is not ready for secure login."
+  - "<dot> <muted>Please contact the staff."
+invalid-username:
+  - "<prefix> <error>This username is not allowed."
+  - "<dot> <muted>Use 3-16 letters, numbers or underscores."
+cracked-disabled:
+  - "<prefix> <error>Only premium accounts can join this server."
+premium-verification-failed:
+  - "<prefix> <error>We could not verify your account right now."
+  - "<dot> <muted>Please try again in a minute."
+bedrock-disabled:
+  - "<prefix> <error>Bedrock accounts are not allowed here."
+already-online:
+  - "<prefix> <error>This account is already online."
+  - "<dot> <muted>Disconnect the other session first."
+wrong-case:
+  - "<prefix> <error>Please join with the exact name <main>%expected%<error>."
+server-switch-blocked:
+  - "<prefix> <warning>Please log in first."
+command-blocked:
+  - "<prefix> <warning>This command is unavailable until you log in."
+rate-limited:
+  - "<prefix> <warning>Slow down a little and try again."
+busy:
+  - "<prefix> <warning>The server is busy. Please try again."
+player-only:
+  - "<prefix> <error>This command is for players only."
+no-permission:
+  - "<prefix> <error>You do not have permission to do that."
+
+# ---------------------------------------------------------------- login
+login-required:
+  - "<prefix> <main>Welcome back. Please log in."
+  - "<dot> <muted>/login <password>"
+login-required-short:
+  - "<prefix> <main>Log in with <accent>/login <password>"
+login-edu:
+  - "<dot> <muted>Never share your password with anyone, not even staff."
+login-title:
+  - "<main>Welcome back"
+login-subtitle:
+  - "<muted>/login <password>"
+login-usage:
+  - "<prefix> <main>Usage: <accent>/login <password>"
+login-success:
+  - "<prefix> <success>✓ Logged in. Welcome back."
+login-wrong:
+  - "<prefix> <error>Wrong password."
+  - "<dot> <muted>Attempts left: %remaining%"
+login-locked:
+  - "<prefix> <error>Too many attempts."
+  - "<dot> <muted>Try again in %minutes% minutes."
+login-lockout-kick:
+  - "<prefix> <error>Too many wrong attempts."
+  - "<dot> <muted>Try again in %minutes% minutes."
+login-not-needed:
+  - "<prefix> <info>You are already logged in."
+login-not-registered:
+  - "<prefix> <warning>You are not registered yet."
+  - "<dot> <muted>/register <password> <password>"
+
+# ---------------------------------------------------------------- register
+register-required:
+  - "<prefix> <main>Welcome. Create your account."
+  - "<dot> <muted>/register <password> <password>"
+register-required-short:
+  - "<prefix> <main>Register with <accent>/register <password> <password>"
+register-edu:
+  - "<dot> <muted>Choose a password you do not use anywhere else."
+register-title:
+  - "<main>Welcome"
+register-subtitle:
+  - "<muted>/register <password> <password>"
+register-usage:
+  - "<prefix> <main>Usage: <accent>/register <password> <password>"
+register-success:
+  - "<prefix> <success>✓ Account created. You are logged in."
+register-already:
+  - "<prefix> <warning>You are already registered."
+  - "<dot> <muted>/login <password>"
+register-not-needed:
+  - "<prefix> <info>You do not need to register."
+register-empty:
+  - "<prefix> <error>Please enter a password."
+register-password-mismatch:
+  - "<prefix> <error>The passwords do not match."
+register-password-too-short:
+  - "<prefix> <error>Your password is too short."
+  - "<dot> <muted>Minimum %min% characters."
+register-password-too-long:
+  - "<prefix> <error>Your password is too long."
+  - "<dot> <muted>Maximum %max% characters."
+register-password-needs-uppercase:
+  - "<prefix> <error>Add at least one uppercase letter."
+register-password-needs-lowercase:
+  - "<prefix> <error>Add at least one lowercase letter."
+register-password-needs-number:
+  - "<prefix> <error>Add at least one number."
+register-password-needs-symbol:
+  - "<prefix> <error>Add at least one symbol."
+register-password-blacklisted:
+  - "<prefix> <error>This password is too common."
+  - "<dot> <muted>Please choose a stronger one."
+register-password-same-as-username:
+  - "<prefix> <error>Your password cannot be your username."
+register-password-invalid-characters:
+  - "<prefix> <error>Your password contains unsupported characters."
+
+# ---------------------------------------------------------------- sessions and verification
+ip-changed:
+  - "<prefix> <warning>Your connection changed."
+  - "<dot> <muted>Please log in again."
+session-expired:
+  - "<prefix> <warning>Your session has expired."
+  - "<dot> <muted>Please log in again."
+session-restored:
+  - "<prefix> <success>✓ Session restored. Welcome back."
+premium-verified:
+  - "<prefix> <success>✓ Premium account verified."
+bedrock-welcome:
+  - "<prefix> <success>✓ Welcome. Your Bedrock account is verified."
+
+# ---------------------------------------------------------------- unregister
+unregister-need-auth:
+  - "<prefix> <error>Log in first."
+unregister-not-applicable:
+  - "<prefix> <info>This account has no password to remove."
+unregister-usage-password:
+  - "<prefix> <main>Usage: <accent>/un_register password <password>"
+unregister-wrong-password:
+  - "<prefix> <error>Wrong password."
+unregister-success:
+  - "<prefix> <success>✓ Your account was removed."
+  - "<dot> <muted>Reconnect to register again."
+unregister-by-admin:
+  - "<prefix> <warning>Your account was removed by the staff."
+  - "<dot> <muted>Reconnect to register again."
+
+# ---------------------------------------------------------------- admin
+admin-help:
+  - "<prefix> <main>Ultras Login"
+  - "<dot> <muted>/ultraslogin reload"
+  - "<dot> <muted>/ultraslogin info <player>"
+  - "<dot> <muted>/ultraslogin session <player>"
+  - "<dot> <muted>/ultraslogin unregister <player>"
+  - "<dot> <muted>/ultraslogin force-login <player>"
+  - "<dot> <muted>/ultraslogin force-logout <player>"
+admin-not-found:
+  - "<prefix> <error>No such account or player."
+admin-nothing-to-unregister:
+  - "<prefix> <info>Nothing to remove for this player."
+admin-unregister-done:
+  - "<prefix> <success>✓ Removed the account of %player%."
+admin-unregister-usage:
+  - "<prefix> <main>Usage: <accent>/ultraslogin unregister <player>"
+admin-info-usage:
+  - "<prefix> <main>Usage: <accent>/ultraslogin info <player>"
+admin-force-not-possible:
+  - "<prefix> <error>This is not possible for that player."
+admin-force-login-done:
+  - "<prefix> <success>✓ %player% was logged in."
+admin-force-logout-done:
+  - "<prefix> <success>✓ %player% was logged out."
+admin-info:
+  - "<prefix> <main>%player%"
+  - "<dot> <muted>Type: %acctype%"
+  - "<dot> <muted>UUID: %uuid%"
+  - "<dot> <muted>Language: %language%"
+  - "<dot> <muted>Registered: %registered%"
+  - "<dot> <muted>Last login: %lastlogin%"
+  - "<dot> <muted>Session: %session%"
+  - "<dot> <muted>IP: %ip%"
+  - "<dot> <muted>State: %online%"
+admin-session:
+  - "<prefix> <main>%player%"
+  - "<dot> <muted>Type: %acctype%"
+  - "<dot> <muted>Session: %session%"
+  - "<dot> <muted>State: %online%"
+value-none:
+  - "none"
+value-expired:
+  - "expired"
+value-active:
+  - "active until"
+config-reloaded:
+  - "<prefix> <success>✓ Configuration reloaded."
+config-reload-warnings:
+  - "<prefix> <warning>Reloaded with %count% warning(s). Check the console."
+
+# ---------------------------------------------------------------- language
+language-usage:
+  - "<prefix> <main>Usage: <accent>/language <en|ar>"
+language-changed:
+  - "<prefix> <success>✓ Language set to %language%."
+
+# ---------------------------------------------------------------- gui
+gui-unavailable:
+  - "<prefix> <warning>The menu is not available right now."
+gui-state-enabled:
+  - "enabled"
+gui-state-disabled:
+  - "disabled"
+gui-language-title:
+  - "<main>UC | Language"
+gui-first-join-title:
+  - "<main>UC | Welcome"
+gui-settings-title:
+  - "<main>UC | Settings"
+gui-select-language-name:
+  - "<accent>Choose your language"
+gui-select-language-lore:
+  - "<muted>Pick the language for all messages."
+  - "<muted>You can change it later with /language."
+gui-click-select:
+  - "<muted>Click to select"
+gui-footer-name:
+  - "<main>One quick step"
+gui-footer-lore:
+  - "<muted>Choose a language to continue."
+gui-notifications-name:
+  - "<main>Notifications"
+gui-notifications-lore:
+  - "<muted>Status: <main>%state%"
+  - "<muted>Click to toggle"
+gui-sounds-name:
+  - "<main>Sounds"
+gui-sounds-lore:
+  - "<muted>Status: <main>%state%"
+  - "<muted>Click to toggle"
+gui-reminders-name:
+  - "<main>Login reminders"
+gui-reminders-lore:
+  - "<muted>Status: <main>%state%"
+  - "<muted>Click to toggle"
+gui-pending-name:
+  - "<muted>Continue"
+gui-pending-lore:
+  - "<muted>Choose a language first."
+gui-continue-name:
+  - "<success>Continue"
+gui-continue-lore:
+  - "<muted>Click to finish"
+gui-close-name:
+  - "<main>Close"
+gui-close-lore:
+  - "<muted>Click to close"

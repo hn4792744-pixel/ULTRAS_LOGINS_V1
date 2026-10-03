@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS ul_accounts (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    uuid VARCHAR(36) NOT NULL,
+    username VARCHAR(32) NOT NULL,
+    username_lower VARCHAR(32) NOT NULL,
+    account_type VARCHAR(16) NOT NULL,
+    password_hash VARCHAR(255) NULL,
+    language VARCHAR(8) NULL,
+    registered_at BIGINT NULL,
+    last_login BIGINT NULL,
+    last_ip_hash VARCHAR(64) NULL,
+    session_token_hash VARCHAR(64) NULL,
+    session_created_at BIGINT NULL,
+    session_expires_at BIGINT NULL,
+    authenticated TINYINT NOT NULL DEFAULT 0,
+    notifications_enabled TINYINT NOT NULL DEFAULT 1,
+    sounds_enabled TINYINT NOT NULL DEFAULT 1,
+    reminders_enabled TINYINT NOT NULL DEFAULT 1,
+    created_at BIGINT NOT NULL,
+    UNIQUE KEY uk_ul_accounts_uuid (uuid),
+    KEY idx_ul_accounts_name (username_lower, account_type)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

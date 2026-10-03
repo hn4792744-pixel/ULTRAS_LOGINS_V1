@@ -1,0 +1,260 @@
+# Ultras Login v1 - الرسائل العربية (MiniMessage).
+# الوسوم: <prefix> <dot> <success> <error> <warning> <info> <main> <muted> <accent>
+# المتغيرات بصيغة %name%. النص العربي لا يُحوَّل ولا يُعدَّل (meta.small-caps: false).
+file-version: 1
+
+meta:
+  name: "العربية"
+  small-caps: false
+
+# ---------------------------------------------------------------- عام
+service-unavailable:
+  - "<prefix> <error>نظام التسجيل غير متاح مؤقتاً."
+  - "<dot> <muted>حاول مرة أخرى بعد لحظات."
+bridge-missing:
+  - "<prefix> <error>هذا السيرفر غير جاهز لتسجيل الدخول الآمن."
+  - "<dot> <muted>تواصل مع الإدارة."
+invalid-username:
+  - "<prefix> <error>هذا الاسم غير مسموح."
+  - "<dot> <muted>استخدم من 3 إلى 16 حرفاً أو رقماً أو شرطة سفلية."
+cracked-disabled:
+  - "<prefix> <error>الدخول متاح للحسابات الأصلية فقط."
+premium-verification-failed:
+  - "<prefix> <error>تعذّر التحقق من حسابك حالياً."
+  - "<dot> <muted>حاول مرة أخرى بعد دقيقة."
+bedrock-disabled:
+  - "<prefix> <error>حسابات بيدروك غير مسموحة هنا."
+already-online:
+  - "<prefix> <error>هذا الحساب متصل بالفعل."
+  - "<dot> <muted>اقطع الجلسة الأخرى أولاً."
+wrong-case:
+  - "<prefix> <error>ادخل بالاسم الصحيح تماماً: <main>%expected%"
+server-switch-blocked:
+  - "<prefix> <warning>سجّل دخولك أولاً."
+command-blocked:
+  - "<prefix> <warning>هذا الأمر غير متاح قبل تسجيل الدخول."
+rate-limited:
+  - "<prefix> <warning>خفف السرعة قليلاً وحاول مجدداً."
+busy:
+  - "<prefix> <warning>السيرفر مشغول. حاول مرة أخرى."
+player-only:
+  - "<prefix> <error>هذا الأمر للاعبين فقط."
+no-permission:
+  - "<prefix> <error>ليس لديك صلاحية لذلك."
+
+# ---------------------------------------------------------------- تسجيل الدخول
+login-required:
+  - "<prefix> <main>أهلاً بعودتك. سجّل دخولك."
+  - "<dot> <muted>/login <password>"
+login-required-short:
+  - "<prefix> <main>سجّل دخولك بالأمر <accent>/login <password>"
+login-edu:
+  - "<dot> <muted>لا تشارك كلمة المرور مع أحد، حتى الإدارة."
+login-title:
+  - "<main>أهلاً بعودتك"
+login-subtitle:
+  - "<muted>/login <password>"
+login-usage:
+  - "<prefix> <main>الاستخدام: <accent>/login <password>"
+login-success:
+  - "<prefix> <success>✓ تم تسجيل الدخول. أهلاً بعودتك."
+login-wrong:
+  - "<prefix> <error>كلمة المرور غير صحيحة."
+  - "<dot> <muted>المحاولات المتبقية: %remaining%"
+login-locked:
+  - "<prefix> <error>محاولات كثيرة."
+  - "<dot> <muted>حاول مجدداً بعد %minutes% دقيقة."
+login-lockout-kick:
+  - "<prefix> <error>محاولات خاطئة كثيرة."
+  - "<dot> <muted>حاول مجدداً بعد %minutes% دقيقة."
+login-not-needed:
+  - "<prefix> <info>أنت مسجّل الدخول بالفعل."
+login-not-registered:
+  - "<prefix> <warning>لم تسجّل حسابك بعد."
+  - "<dot> <muted>/register <password> <password>"
+
+# ---------------------------------------------------------------- إنشاء حساب
+register-required:
+  - "<prefix> <main>أهلاً بك. أنشئ حسابك."
+  - "<dot> <muted>/register <password> <password>"
+register-required-short:
+  - "<prefix> <main>سجّل حسابك بالأمر <accent>/register <password> <password>"
+register-edu:
+  - "<dot> <muted>اختر كلمة مرور لا تستخدمها في أي مكان آخر."
+register-title:
+  - "<main>أهلاً بك"
+register-subtitle:
+  - "<muted>/register <password> <password>"
+register-usage:
+  - "<prefix> <main>الاستخدام: <accent>/register <password> <password>"
+register-success:
+  - "<prefix> <success>✓ تم إنشاء الحساب وتسجيل دخولك."
+register-already:
+  - "<prefix> <warning>أنت مسجّل بالفعل."
+  - "<dot> <muted>/login <password>"
+register-not-needed:
+  - "<prefix> <info>لا تحتاج إلى التسجيل."
+register-empty:
+  - "<prefix> <error>اكتب كلمة المرور."
+register-password-mismatch:
+  - "<prefix> <error>كلمتا المرور غير متطابقتين."
+register-password-too-short:
+  - "<prefix> <error>كلمة المرور قصيرة."
+  - "<dot> <muted>الحد الأدنى %min% أحرف."
+register-password-too-long:
+  - "<prefix> <error>كلمة المرور طويلة."
+  - "<dot> <muted>الحد الأقصى %max% حرفاً."
+register-password-needs-uppercase:
+  - "<prefix> <error>أضف حرفاً كبيراً واحداً على الأقل."
+register-password-needs-lowercase:
+  - "<prefix> <error>أضف حرفاً صغيراً واحداً على الأقل."
+register-password-needs-number:
+  - "<prefix> <error>أضف رقماً واحداً على الأقل."
+register-password-needs-symbol:
+  - "<prefix> <error>أضف رمزاً واحداً على الأقل."
+register-password-blacklisted:
+  - "<prefix> <error>كلمة المرور هذه شائعة جداً."
+  - "<dot> <muted>اختر كلمة أقوى."
+register-password-same-as-username:
+  - "<prefix> <error>لا يمكن أن تكون كلمة المرور هي اسمك."
+register-password-invalid-characters:
+  - "<prefix> <error>كلمة المرور تحتوي على رموز غير مدعومة."
+
+# ---------------------------------------------------------------- الجلسات والتحقق
+ip-changed:
+  - "<prefix> <warning>تغيّر اتصالك."
+  - "<dot> <muted>سجّل دخولك مرة أخرى."
+session-expired:
+  - "<prefix> <warning>انتهت جلستك."
+  - "<dot> <muted>سجّل دخولك مرة أخرى."
+session-restored:
+  - "<prefix> <success>✓ تمت استعادة جلستك. أهلاً بعودتك."
+premium-verified:
+  - "<prefix> <success>✓ تم التحقق من حسابك الأصلي."
+bedrock-welcome:
+  - "<prefix> <success>✓ أهلاً بك. تم التحقق من حساب بيدروك."
+
+# ---------------------------------------------------------------- حذف الحساب
+unregister-need-auth:
+  - "<prefix> <error>سجّل دخولك أولاً."
+unregister-not-applicable:
+  - "<prefix> <info>هذا الحساب ليس له كلمة مرور لحذفها."
+unregister-usage-password:
+  - "<prefix> <main>الاستخدام: <accent>/un_register password <password>"
+unregister-wrong-password:
+  - "<prefix> <error>كلمة المرور غير صحيحة."
+unregister-success:
+  - "<prefix> <success>✓ تم حذف حسابك."
+  - "<dot> <muted>أعد الدخول للتسجيل من جديد."
+unregister-by-admin:
+  - "<prefix> <warning>تم حذف حسابك بواسطة الإدارة."
+  - "<dot> <muted>أعد الدخول للتسجيل من جديد."
+
+# ---------------------------------------------------------------- الإدارة
+admin-help:
+  - "<prefix> <main>Ultras Login"
+  - "<dot> <muted>/ultraslogin reload"
+  - "<dot> <muted>/ultraslogin info <player>"
+  - "<dot> <muted>/ultraslogin session <player>"
+  - "<dot> <muted>/ultraslogin unregister <player>"
+  - "<dot> <muted>/ultraslogin force-login <player>"
+  - "<dot> <muted>/ultraslogin force-logout <player>"
+admin-not-found:
+  - "<prefix> <error>لا يوجد حساب أو لاعب بهذا الاسم."
+admin-nothing-to-unregister:
+  - "<prefix> <info>لا يوجد شيء لحذفه لهذا اللاعب."
+admin-unregister-done:
+  - "<prefix> <success>✓ تم حذف حساب %player%."
+admin-unregister-usage:
+  - "<prefix> <main>الاستخدام: <accent>/ultraslogin unregister <player>"
+admin-info-usage:
+  - "<prefix> <main>الاستخدام: <accent>/ultraslogin info <player>"
+admin-force-not-possible:
+  - "<prefix> <error>هذا غير ممكن لهذا اللاعب."
+admin-force-login-done:
+  - "<prefix> <success>✓ تم تسجيل دخول %player%."
+admin-force-logout-done:
+  - "<prefix> <success>✓ تم تسجيل خروج %player%."
+admin-info:
+  - "<prefix> <main>%player%"
+  - "<dot> <muted>النوع: %acctype%"
+  - "<dot> <muted>UUID: %uuid%"
+  - "<dot> <muted>اللغة: %language%"
+  - "<dot> <muted>التسجيل: %registered%"
+  - "<dot> <muted>آخر دخول: %lastlogin%"
+  - "<dot> <muted>الجلسة: %session%"
+  - "<dot> <muted>IP: %ip%"
+  - "<dot> <muted>الحالة: %online%"
+admin-session:
+  - "<prefix> <main>%player%"
+  - "<dot> <muted>النوع: %acctype%"
+  - "<dot> <muted>الجلسة: %session%"
+  - "<dot> <muted>الحالة: %online%"
+value-none:
+  - "لا يوجد"
+value-expired:
+  - "منتهية"
+value-active:
+  - "فعّالة حتى"
+config-reloaded:
+  - "<prefix> <success>✓ تمت إعادة تحميل الإعدادات."
+config-reload-warnings:
+  - "<prefix> <warning>تمت إعادة التحميل مع %count% تحذير. راجع الكونسول."
+
+# ---------------------------------------------------------------- اللغة
+language-usage:
+  - "<prefix> <main>الاستخدام: <accent>/language <en|ar>"
+language-changed:
+  - "<prefix> <success>✓ تم تغيير اللغة إلى %language%."
+
+# ---------------------------------------------------------------- الواجهات
+gui-unavailable:
+  - "<prefix> <warning>القائمة غير متاحة حالياً."
+gui-state-enabled:
+  - "مفعّل"
+gui-state-disabled:
+  - "معطّل"
+gui-language-title:
+  - "<main>UC | اللغة"
+gui-first-join-title:
+  - "<main>UC | أهلاً بك"
+gui-settings-title:
+  - "<main>UC | الإعدادات"
+gui-select-language-name:
+  - "<accent>اختر لغتك"
+gui-select-language-lore:
+  - "<muted>اختر لغة جميع الرسائل."
+  - "<muted>يمكنك تغييرها لاحقاً بالأمر /language."
+gui-click-select:
+  - "<muted>اضغط للاختيار"
+gui-footer-name:
+  - "<main>خطوة واحدة فقط"
+gui-footer-lore:
+  - "<muted>اختر لغة للمتابعة."
+gui-notifications-name:
+  - "<main>الإشعارات"
+gui-notifications-lore:
+  - "<muted>الحالة: <main>%state%"
+  - "<muted>اضغط للتبديل"
+gui-sounds-name:
+  - "<main>الأصوات"
+gui-sounds-lore:
+  - "<muted>الحالة: <main>%state%"
+  - "<muted>اضغط للتبديل"
+gui-reminders-name:
+  - "<main>تذكير تسجيل الدخول"
+gui-reminders-lore:
+  - "<muted>الحالة: <main>%state%"
+  - "<muted>اضغط للتبديل"
+gui-pending-name:
+  - "<muted>متابعة"
+gui-pending-lore:
+  - "<muted>اختر اللغة أولاً."
+gui-continue-name:
+  - "<success>متابعة"
+gui-continue-lore:
+  - "<muted>اضغط للإنهاء"
+gui-close-name:
+  - "<main>إغلاق"
+gui-close-lore:
+  - "<muted>اضغط للإغلاق"

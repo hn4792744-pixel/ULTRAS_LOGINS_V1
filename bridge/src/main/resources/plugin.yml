@@ -1,0 +1,6 @@
+name: UltrasLoginBridge
+version: '${version}'
+main: me.uc_hussein.ultraslogin.bridge.UltrasBridgePlugin
+api-version: '26.2'
+authors: [UC_Hussein]
+description: Backend bridge of Ultras Login (restrictions, menus, teleports). Needs the Velocity plugin.
